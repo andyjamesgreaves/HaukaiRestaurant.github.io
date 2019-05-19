@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+The Haukai Restaurant Gift Vouchers page
+-->
+<html lang="eng">
+    <head>
+        <title>Gift Vouchers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/GiftVoucher.js"></script>
+    </head>
+    <body>
+			<div id="bg-image"><img src="images/mussels and scallops.jpg" width="100%" alt="" ></div>
+			<header>				
+				<div id="logo">
+					<img src="images/mussels and scallops.jpg" height="160px" width="15%" alt="mussels and scallops">  	
+					<img src = "images/Logo1.jpg" height="160px" width="18%" alt="logo">
+					<img src="images/dining out1.jpg" height="160px" width="15%" alt="dining out"><br><br>
+					<p1>1 Island Street</p1><br>
+					<p1>Kerikeri, Bay of Islands</p1><br>
+					<p1>09 401 4019</p1><br>
+					<p1>Open: 5pm - 10pm  Wed - Sun</p1>				
+				</div>		
+				<div class="images">
+					<br><br>
+					<img src="images/restaurant interior.jpg" height="140px" width="10%" alt="restaurant interior">
+					<img src="images/fish of the day.jpg" height="140px" width="10%" alt="fish of the day">
+					<img src="images/dining out2.jpg" height="140px" width="10%" alt="group dining out">
+					<img src="images/beer and cider.jpg" height="140px" width="10%" alt="beer and cider">
+					<img src="images/poached salmon.jpg" height="140px" width="10%" alt="poached salmon">
+					<img src="images/red wine.jpg" height="140px" width="10%" alt="red wine"><br><br><br>
+				</div>
+				</header>
+		<nav>
+				<strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong>
+				<a href="Index.html">Home</a><strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong>
+				<a href="About Us.html">About Us</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    							
+				<a href="Menu.html">Menu</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>
+				<a href="Gift Vouchers.html">Gift Vouchers</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    						   							
+				<a href="Bookings.html">Make Reservation</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    							
+				<a href="Contact Us.html">Contact Us</a><strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong><br>				  
+		</nav>
+		<div class="main-container">
+			<div id="panel-heading"><h1>Gift Vouchers</h1></div>
+			<div id="panel1">				
+				<form id="giftvoucherForm" method="post" action="#" onsubmit="return checkformGiftVoucher()" onreset="return resetForm()">
+					<fieldset>				
+						<br>
+						<label for="giftVoucher">Gift Amount:</label>&nbsp;&nbsp;&nbsp;
+						<select id="giftVoucher" name="giftVoucher" onKeyPress="return disableEnterKey(event)">
+							<option value="$20">$20</option>
+							<option value="$50">$50</option>
+							<option value="$100">$100</option>
+						</select><br><br>
+						<label for="firstName">First name:</label>
+							<input type="text" id="firstName" name = "firstName"><br><br>
+						<label for="lastName">Last name:<label>
+							<input type="text" id="lastName" name = "lastName"><br><br>
+						<label for="phoneNumber">Phone:<label>
+							<input type="text" id="phoneNumber" name = "phoneNumber"><br><br>
+						<label for="Email">Email:</label>
+							<input type="text" id="Email" name = "Email" style="width: 90%"><br><br>
+						<label>Mailing Address:</label><br><br>
+						<label for="Street">Street:<l/label>
+						<input type="text" id="Street" name = "Street"><br><br>
+						<label for="Suburb">Suburb:</label>
+							<input type="text" id="Suburb" name = "Suburb"><br><br>
+						<label for="City">City:</label>
+							<input type="text" id="City" name = "City"><br><br>
+						<label for="postCode">Postcode:</label>
+							<input type="text" id="postCode" name = "postCode"><br><br>
+						<label for="Payment">Payment Method:</label>
+						<select id="Payment" name="Payment" type="text">
+							<option value="paypal">PayPal</option>
+							<option value="visa">Visa</option>
+							<option value="mastercard">Mastercard</option>
+						</select><br><br>
+						<input id="submit" type="submit" style="font-weight: bold;">&nbsp;
+						<input id="cancel" type="reset" value = "Cancel" style="font-weight: bold;"><br><br>
+					</fieldset>
+				</form>				
+			</div><!--panel1-->
+			<div id="panel2">
+				<p>Gift vouchers are a great gift for family and friends.</p>
+				<img src="images/dining out3.jpg" height="75%" width="100%" alt= "dining out">
+			</div><!--panel2-->
+		</div><!--panel-default-->
+		<div class="footer">&copy Copyright 2019 The Haukai Restaurant. Design by Andy Greaves</div>
+    </body>
+</html>

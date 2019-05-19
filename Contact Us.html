@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+The Haukai Restaurant Contact Us page
+-->
+<html lang="eng">
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/css.css" />
+		<script type="text/javascript" src="js/ContactUs.js"></script>
+    </head>
+    <body>
+			<div id="bg-image"><img src="images/mussels and scallops.jpg" width="100%" alt="" ></div>
+			<header>
+				<div id="logo">
+					<img src="images/mussels and scallops.jpg" height="160px" width="15%" alt="mussels and scallops">  	
+					<img src = "images/Logo1.jpg" height="160px" width="18%" alt="logo">
+					<img src="images/dining out1.jpg" height="160px" width="15%" alt="dining out"><br><br>
+					<p1>1 Island Street</p1><br>
+					<p1>Kerikeri, Bay of Islands</p1><br>
+					<p1>09 401 4019</p1><br>
+					<p1>Open: 5pm - 10pm  Wed - Sun</p1>				
+				</div>		
+				<div class="images">
+					<br><br>
+					<img src="images/restaurant interior.jpg" height="140px" width="10%" alt="restaurant interior">
+					<img src="images/fish of the day.jpg" height="140px" width="10%" alt="fish of the day">
+					<img src="images/dining out2.jpg" height="140px" width="10%" alt="group dining out">
+					<img src="images/beer and cider.jpg" height="140px" width="10%" alt="beer and cider">
+					<img src="images/poached salmon.jpg" height="140px" width="10%" alt="poached salmon">
+					<img src="images/red wine.jpg" height="140px" width="10%" alt="red wine"><br><br><br>
+				</div>
+				</header>
+		<nav>
+				<strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong>
+				<a href="Index.html">Home</a><strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong>
+				<a href="About Us.html">About Us</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    							
+				<a href="Menu.html">Menu</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>
+				<a href="Gift Vouchers.html">Gift Vouchers</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    						   							
+				<a href="Bookings.html">Make Reservation</a><strong>&nbsp; &nbsp;|&nbsp; &nbsp;</strong>    							
+				<a href="Contact Us.html">Contact Us</a><strong>&nbsp; &nbsp;|&nbsp;&nbsp;</strong><br>				  
+		</nav>
+		<div class="main-container">
+		<div id="panel-heading"><h1>Contact Us</h1></div>
+			<div id="panel1">
+				<p>
+				Owners:<br>
+				Ben Raharuhi & Marie Raharuhi<br><br>
+				Address:<br>
+				1 Island Street<br>
+				Kerikeri<br>
+				Bay of Islands<br>
+				Phone: 09 401 4019</p>
+				<form id="messageContainer" method="post" action="ContactUs.php" onsubmit="return checkMessageUs()" onreset="return resetForm()">
+					<label for="textArea" style="font-weight: bold;">Send us a message:</label><br><br>
+					<textarea wrap="off" placeholder="Enter message here." name="message" type="text" rows="8" cols="80"></textarea><br><br>
+					<label for="Email">Your email:</label>
+					<input type="Email" id="Email" name="Email"><br><br>
+					<input id="submit" type="submit" style="font-weight: bold;">&nbsp;
+					<input id="cancel" type="reset" value = "Cancel" style="font-weight: bold;"><br><br>
+				</form><br><br>
+				<p>Follow us on:</p>
+				<p>	
+					<a href="http://facebook.com"><img src="Images/Facebook.png" height="80" width="10%"></a>&nbsp;&nbsp;					
+							<a href="http://googleplus.com"><img src="Images/Google+.png" height="80" width="10%"></a>&nbsp;&nbsp;
+							<a href="http://twitter.com"><img src="Images/Twitter.png" height="80" width="10%"></a><br>					
+				</p>
+				<a href="Roster.html">Staff Roster</a>					
+			</div><!--panel1-->
+			<div id="panel2">
+				<h2>Location</h2>
+				<div class="mapouter"><div class="gmap_canvas"><iframe width=100% height=80% id="gmap_canvas" src="https://maps.google.com/maps?q=102%20kerikeri%20rd%2C%20kerikeri%2C%20bay%20of%20islands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+			</div><!--panel1-->			
+			<br>
+		</div><!--main-container-->
+		<div class="footer">&copy Copyright 2019 The Haukai Restaurant. Design by Andy Greaves</div>
+    </body>
+</html>
