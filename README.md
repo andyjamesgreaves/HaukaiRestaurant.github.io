@@ -15,7 +15,7 @@ The roster uses Google Calendar which is updated weekly, or ad-hoc by the restau
 
 Github:
 
-A master repository was set up in Github to store the website and to share/view it with others.
+A master repository was set up in Github.com to store the website files - to share/view it with others.
 Username: andyjamesgreaves
 URL: https://github.com/andyjamesgreaves/The_Haukai_Restaurant.git
 
