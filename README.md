@@ -3,7 +3,7 @@
 The Haukai Restaurant project consists of a web site to attract both local and tourist customers to the restaurant.
 The web site is made up of seven seperate pages (6 - visible, 1 - hidden):
 * Home page - welcomes the visitor to the site and has a brief description of what the restaurant is about and has to offer.
-* Contact Us page - introduce the owners and a brief history behind the restaurant.
+* About Us page - introduce the owners and a brief history behind the restaurant.
 * Menu page - shows the full menu contents along with a photo image of the dish.
 * Gift Vouchers - an online form for the customer to fill out and submit to receive the requested gift vouchers via mail.
 * Make Reservation page - online form for the customer to select a date and time they wish to make a booking for.
@@ -13,6 +13,11 @@ This page also has a staff roster link which an employee can click to see the ho
 This page is not visible in the main navigation links on any of the other pages.
 The roster uses Google Calendar which is updated weekly, or ad-hoc by the restaurant owners/manager.
 
+Github:
+
+A master repository was set up in Github to store the website and to share/view it with others.
+Username: andyjamesgreaves
+URL: https://github.com/andyjamesgreaves/The_Haukai_Restaurant.git
 
 
 
