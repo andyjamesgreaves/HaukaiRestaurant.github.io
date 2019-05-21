@@ -1,7 +1,7 @@
 # The-Haukai-Restaurant
 
 The Haukai Restaurant project consists of a web site to attract both local and tourist customers to the restaurant.
-The web site is made up of seven seperate pages:
+The web site is made up of seven seperate pages (6 - visible, 1 - hidden):
 * Home page - welcomes the visitor to the site and has a brief description of what the restaurant is about and has to offer.
 * Contact Us page - introduce the owners and a brief history behind the restaurant.
 * Menu page - shows the full menu contents along with a photo image of the dish.
@@ -11,7 +11,7 @@ The web site is made up of seven seperate pages:
 This page also has a staff roster link which an employee can click to see the hours that they have been rostered on for.
 * Roster page - includes a calendar which lists the hours each employee has been rostered on for.
 This page is not visible in the main navigation links on any of the other pages.
-The roster uses Google Calendar which is updated weekly, or ad-hoc by the restaurant owners.
+The roster uses Google Calendar which is updated weekly, or ad-hoc by the restaurant owners/manager.
 
 
 
@@ -157,8 +157,65 @@ This hides the panel2 container from the page when the screen is less than 800px
 
 
 
+#Optimise page loading times
+
+Techniques used for optimising page loading:
+
+1. Implement a Content Delivery Network (CDN). 
+This is where a collection of global servers 'share' a website’s static files, such as CSS or JavaScript, and they deliver from the server closest to the user’s 'physical location'.
+(Discussed further under next #heading).
+
+2. Use adaptive images. 
+Images take longer to load than text 
+Using tools such as Picturefill or Adaptive Images on your website can save bandwidth and improve page speed for your site. 
+Another option is to adopt new image formats like WebP and JPeg XR—this can help reduce image weight by twenty to fifty percent without sacrificing image quality.
+
+3. HTTP Caching. 
+Browser caching stores cache versions of static resources - a process that increases page speed and reduces server lag. When a user visits a page on your website, the cached version usually displays unless it has changed since it was last cached. 
+Therefore, the browser saves a lot of requests to your server and improves load speed for the site.
+
+4. Evaluate plugins. 
+The more plugins a website has, the longer it takes to load. 
+Poor or outdated plugins can slow down website performance dramatically - which could be fixed by removing plugins that duplicate functionality, or are out of date or are no longer used.
+
+5. Combine images into CSS sprites. 
+With several images on a page, you are forcing multiple roundtrips of the server to get all the resources secured, which slows down page speed. 
+Sprites combine all background images on a page into one single image, which means all images appear when the main “sprite” loads. This reduces the chance of 'flickering' images and a smoother experience for the user.
+
+6. Enable HTTP 'keep-alive' response headers. 
+HTTP requests grab a single file, distribute and close - which ia a process that is not always fast, so 'keep-alive' allows the web browser and server to agree to use the same connection to grab and send multiple files. 
+In this scenerio, the server holds the connection open while a user is on the site instead of opening a new connection with every request, easing the load for the processor, network and memory.
+
+7. Compress content. 
+You can compress your content significantly in order to improve your website performance, by removing unnecessary spaces and characters within the HTML, CSS and JavaScript code. 
+Web servers such as Apache and IIS use the GZIP compression algorithm to do this automatically. 
+There are other compressor services online that can perform this task.
+
+8. Configure expire-date in headers. 
+Website files are stored on the local computer so that the website loads faster the next time the user visits the site. 
+There is an expiration date in the file header that determines how long these files will be stored on their computer, which is usually set to 24 hours by default. 
+You can configure the expires header so that the files never time-out, or you can increase the expiration date so that it doesn’t impact your server and page load time.
+
+9. Minify JavaScript and CSS code. 
+By removing unnecessary line breaks, extra space, and so on, you will speed up parsing, downloading and executing by cutting bytes from the page. 
+Tools like this CSS Minifier/Compressor can be very helpful in this department.
+
+10. Review your hosting package. 
+If all previous steps have been taken and the website is still loading slowly, you may want to consider a new hosting package. On a typical shared hosting account, you might be sharing server space with dozens of other companies, which can impact the speed of your website since a number of people are using the same server.
+
+Refer - screenshot showing the network performance in Chrome's Developer Tools (Screenshots folder).
+
+
 #HTTP caching and Content Delivery Networks
 
-These can further improve responsiveness.
+HTTP Caching:
+
+Ensure that the users mobile browser uses local memory to cache resources in order to avoid unnecessary server requests - improves responsive page loading times.
+
+
+Content Delivery Networks:
+
+Content Delivery Network is a system of distributed servers (network) that deliver webpages and other Web content to a user based on the geographic locations of the user.
+You may use a Content Delivery Network (CDN) such as Amazon Cloudfront to reduce the page load time. Access to a faster server near your user’s geographical location ensures faster loading time for your mobile site.
 
 
