@@ -13,7 +13,7 @@ This page also has a staff roster link which an employee can click to see the ho
 This page is not visible in the main navigation links on any of the other pages.
 The roster uses Google Calendar which is updated weekly, or ad-hoc by the restaurant owners/manager.
 
-Github:
+GitHub:
 
 A master repository was set up in Github.com to store the website files - to share/view it with others.
 Username: andyjamesgreaves
@@ -23,8 +23,12 @@ URL: https://github.com/andyjamesgreaves/The_Haukai_Restaurant.git
 
 #Privacy Statement
 
-The images included in the web pages have been uploaded from the internet which are public images that can be shared - so as not to impose on any copyright laws for distribution.
-The purpose of the images was to give the visitor to the site an indication of what the restaurant has to offer, especially with the menu dishes.
+The images included in the web pages have been uploaded from the internet which are public images that can be shared - so as not to impose on any copyright laws.
+The purpose of the images was to give the visitor to the site an indication of what the restaurant has to offer, especially with the menu dishes, and not for further distribution.
+
+The data collected from clients entering personal information in the forms in Gift Vouchers and Make Reservation are
+stored in a MySQL database on the host-server - which are NOT shared and inaccessible to the public.
+The data for the email entered by the user sending a message to The Haukai Restaurant in the Contact Us page - is also stored on the host-server in a MySQL database and is NOT shared or accessed by the public and is only used to repond via email to the sender of the message.
 
 
 
@@ -107,13 +111,10 @@ Included eng in the html tag <html lang="eng">.
 Lines 59 and 60 are input type="submit" type="reset" and therefore do not require labels - so no changes needed (but will still show up on AChecker as 2 known problems).
 
 
-
 Roster.html - 2 known problems.
 Included an alt text element to every photo image with a brief description of the image.
 (Ref 3.1 check 48, 49) - Document language not identified (eng - English).
 Included eng in the html tag <html lang="eng">.
-
-
 
 
 Changes to potential problems:
@@ -138,14 +139,7 @@ This was included in the HTML code and CSS:
 e.g. style = "font-size: 10vw" in HTML.
 e.g. { font-size: 10vw; } in CSS.
 (where 1 vw = 1% of the viewport width).
-Images were also scaled to fit width size by using percentages:
-e.g. width="10%" in HTML.
-e.g. { width: 10%; } in CSS.
-A maximum width was also incorporated so as not to allow the image to stretch too far beyond its original size and distort the image.
-e.g. style = "max-width = "100%" in HTML
-e.g. { max-width: 100%; } in CSS.
-Also, wherever possible -  vector image file formats were used (as opposed to raster images that tend to distort when resized), so as not to skew the image too much when stretching according to screen size.
-However, this was not possible for all images and so had to allow for width and height resizing accordingly to minimize distortion on different screen sizes.
+
 To cater for devices with screen width less than 800 pixels - used media query to define different widths for different screen sizes using the following code in CSS:
 @media screen and (max-width: 800px) {
 	.main-container {
@@ -160,6 +154,52 @@ To cater for devices with screen width less than 800 pixels - used media query t
 }
 This hides the panel2 container from the page when the screen is less than 800px (This panel is only decorative and not informative).
 
+Images:
+
+Images were also scaled to fit width size by using percentages:
+e.g. width="10%" in HTML.
+e.g. { width: 10%; } in CSS.
+A maximum width was also incorporated so as not to allow the image to stretch too far beyond its original size and distort the image.
+e.g. style = "max-width = "100%" in HTML
+e.g. { max-width: 100%; } in CSS.
+Also, wherever possible -  vector image file formats were used (as opposed to raster images that tend to distort when resized), so as not to skew the image too much when stretching according to screen size.
+However, this was not possible for all images and so had to allow for width and height resizing accordingly to minimize distortion on different screen sizes.
+
+After, using Chrome Dev Tool - Devices, the height made the images look 'stretched' on mobile devices with narrow screen widths.
+Therefor, other responsive methods may be needed in order to allow for height with regards to width to give a better quality resized image for different devices.
+
+Other methods:
+
+*Adaptive images: 
+
+The following is referencing to adaptive images - source: https://responsivedesign.is/resources/images/adaptive-images/:
+
+Adaptive Images does a number of things depending on the scenario the script has to handle but here’s a basic overview of what happens when you load a page:
+
+1. The HTML starts to load in the browser and a snippet of JS in the <head> writes a session cookie, storing the visitor’s screen size in pixels.
+2. The browser then encounters an <img> tag and sends a request to the server for that image. It also sends the cookie, because that’s how browsers work.
+3. Apache receives the request for the image and immediately has a look in the website’s.htaccess file, to see if there are any special instructions for serving files.
+4. There are! The .htaccess says “Dear server, any request you get for a JPG, GIF, or PNG file please send to the adaptive-images.php file instead.”
+
+The PHP file then does some intelligent thinking which can cover a number of scenario’s but I’ll illustrate one path that can happen:
+
+1. The PHP file looks for a cookie and finds that the user has a maximum screen size of 480px.
+2. It compares the cookie value with all $resolution sizes that were configured, and decides which matches best. In this case, an image maxing out at 480px wide.
+3. It then has a look inside the /ai-cache/480/ folder to see if a rescaled image already exists.
+4. We’ll pretend it doesn’t – the PHP then goes to the actual requested URI to find the original file.
+5. It checks the image width. If that’s smaller than the user’s screen width it sends the image.
+6. If it’s larger, the PHP creates a down-scaled copy and saves that into the /ai-cache/480/ folder ready for the next time it’s needed, and sends it to the user.
+
+An example of this, including the php code, can be found at GitHub:
+https://github.com/MattWilcox/Adaptive-Images
+
+
+*Combine Images to CSS Sprites:
+
+CSS sprites allow you to combine multiple images into a single file. 
+Ordinary sprites are a fixed size, but 'responsive sprites' are able to be resized, for example using: max-width: 100%;
+
+
 
 
 #Optimise page loading times
@@ -168,7 +208,7 @@ Techniques used for optimising page loading:
 
 1. Implement a Content Delivery Network (CDN). 
 This is where a collection of global servers 'share' a website’s static files, such as CSS or JavaScript, and they deliver from the server closest to the user’s 'physical location'.
-(Discussed further under next #heading).
+(Discussed further under #HTTP caching and Content Delivery Networks).
 
 2. Use adaptive images. 
 Images take longer to load than text 
@@ -183,7 +223,9 @@ Therefore, the browser saves a lot of requests to your server and improves load 
 The more plugins a website has, the longer it takes to load. 
 Poor or outdated plugins can slow down website performance dramatically - which could be fixed by removing plugins that duplicate functionality, or are out of date or are no longer used.
 
-5. Combine images into CSS sprites. 
+5. Combine images into CSS sprites.
+CSS sprites allow you to combine multiple images into a single file. 
+This reduces the number of HTTP requests, speeding up page loading. 
 With several images on a page, you are forcing multiple roundtrips of the server to get all the resources secured, which slows down page speed. 
 Sprites combine all background images on a page into one single image, which means all images appear when the main “sprite” loads. This reduces the chance of 'flickering' images and a smoother experience for the user.
 
