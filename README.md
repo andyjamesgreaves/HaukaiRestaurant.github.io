@@ -157,30 +157,9 @@ e.g. { max-width: 100%; } in CSS.
 Height was ddressed using rem (e.g. height: 1.2rem )in CSS to cater for screen size.
 Also, wherever possible -  vector image file formats were used (as opposed to raster images that tend to distort when resized), so as not to skew the image too much when stretching according to screen size.
 
-Other methods:
+Another method that could used, but not incorporated here, could include Adaptive Images but requires more CSS and PHP coding.
 
-*Adaptive images: 
 
-The following is referencing to adaptive images - source: https://responsivedesign.is/resources/images/adaptive-images/:
-
-Adaptive Images does a number of things depending on the scenario the script has to handle but here’s a basic overview of what happens when you load a page:
-
-1. The HTML starts to load in the browser and a snippet of JS in the <head> writes a session cookie, storing the visitor’s screen size in pixels.
-2. The browser then encounters an <img> tag and sends a request to the server for that image. It also sends the cookie, because that’s how browsers work.
-3. Apache receives the request for the image and immediately has a look in the website’s.htaccess file, to see if there are any special instructions for serving files.
-4. There are! The .htaccess says “Dear server, any request you get for a JPG, GIF, or PNG file please send to the adaptive-images.php file instead.”
-
-The PHP file then does some intelligent thinking which can cover a number of scenario’s but I’ll illustrate one path that can happen:
-
-1. The PHP file looks for a cookie and finds that the user has a maximum screen size of 480px.
-2. It compares the cookie value with all $resolution sizes that were configured, and decides which matches best. In this case, an image maxing out at 480px wide.
-3. It then has a look inside the /ai-cache/480/ folder to see if a rescaled image already exists.
-4. We’ll pretend it doesn’t – the PHP then goes to the actual requested URI to find the original file.
-5. It checks the image width. If that’s smaller than the user’s screen width it sends the image.
-6. If it’s larger, the PHP creates a down-scaled copy and saves that into the /ai-cache/480/ folder ready for the next time it’s needed, and sends it to the user.
-
-An example of this, including the php code, can be found at GitHub:
-https://github.com/MattWilcox/Adaptive-Images
 
 
 
