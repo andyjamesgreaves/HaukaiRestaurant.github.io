@@ -8,6 +8,12 @@
 	z-index: -2;
 	opacity: 0.3;	
 }
+#img-resize {
+	height: 140px;
+}
+#logo-img {
+	height: 160px;
+}
 #logo {
 	text-align: center;
 }
@@ -155,15 +161,7 @@
 	margin-bottom: 1%;
 	margin-top: 0px;
 	padding: 2%;
-}/*
-.item1 {
-	position: relative;
-	text-align: left;
-	font-size: 40px;
-	border-style: solid;
-	border-width: 2px;
-	background-color: white;	
-}*/
+}
 .footer { 
 	background-color: lightblue;
 	left: 0;
@@ -232,13 +230,13 @@ h1 {
 }
 h2 {
 	color: blue;
-	font-size: 1.8vw;
+	font-size: 1.5rem;
 	font-style: bold;
 	font-family: "curlz mt";
 }
 h3 {
 	color: black;
-	font-size: 1.5vw;
+	font-size: 1.2rem;
 }
 p {
 	color: black;
@@ -282,6 +280,9 @@ label {
 	margin-left: 10px;
 	font-size: 1rem;	
 }
+img {
+	max-width: 100%;
+}
 
 /* Media query to add a break point at 800px */
 @media screen and (max-width: 800px) {
@@ -302,6 +303,12 @@ label {
 	p1 {
 		font-size: 1rem;
 	}
+	#img-resize {
+		height: 60px;
+	}
+	#logo-img {
+		height: 80px;
+	} 
 	#panel1 {
 		grid-column-start: 1;
 		grid-column-end: span 2;
@@ -340,16 +347,10 @@ label {
 	}
 	h2 {
 		font-size: 1.5rem;
-	}/*
-	label {
-		font-size: 1rem;
 	}
-	input {
-		font-size: 1rem;
+	h3 {
+		font-size: 1.5rem;
 	}
-	select {
-		font-size: 1rem;
-	}*/
 	textarea {
 		width: 80%;
 	}

@@ -134,25 +134,17 @@ Reduced the use of absolute sizes with regards to the width of the screen sizes 
 Setting the viewport:
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> within the <head></head> tags on each page.
 For contents using containers and panels - width was measured as a percentage (rather than pixels) of the screen width, to allow for different screen widths.
-Instead of using absolute sizing of text fonts to cater for different screen sizes - replaced pixels with vw (viewport width) to optimize text for reading.
+Instead of using absolute sizing of text fonts to cater for different screen sizes in pixels - replaced with root Em's or rem in the CSS code to optimize text for reading.
 This was included in the HTML code and CSS:
-e.g. style = "font-size: 10vw" in HTML.
-e.g. { font-size: 10vw; } in CSS.
+e.g. style = "font-size: 1vw" in HTML.
+e.g. { font-size: rem; } in CSS.
 (where 1 vw = 1% of the viewport width).
 
 To cater for devices with screen width less than 800 pixels - used media query to define different widths for different screen sizes using the following code in CSS:
 @media screen and (max-width: 800px) {
-	.main-container {
-		width: 100%;
-	}
-	#panel1 {
-		width: 95%;
-	}
-	#panel2 {
-		visibility: hidden;
-	}
+	...
 }
-This hides the panel2 container from the page when the screen is less than 800px (This panel is only decorative and not informative).
+Within the brackets can alter all the dimensions for containers, images and font size for headings and paragraphs accordingly (Refer CSS code).
 
 Images:
 
@@ -162,11 +154,8 @@ e.g. { width: 10%; } in CSS.
 A maximum width was also incorporated so as not to allow the image to stretch too far beyond its original size and distort the image.
 e.g. style = "max-width = "100%" in HTML
 e.g. { max-width: 100%; } in CSS.
+Height was ddressed using rem (e.g. height: 1.2rem )in CSS to cater for screen size.
 Also, wherever possible -  vector image file formats were used (as opposed to raster images that tend to distort when resized), so as not to skew the image too much when stretching according to screen size.
-However, this was not possible for all images and so had to allow for width and height resizing accordingly to minimize distortion on different screen sizes.
-
-After, using Chrome Dev Tool - Devices, the height made the images look 'stretched' on mobile devices with narrow screen widths.
-Therefor, other responsive methods may be needed in order to allow for height with regards to width to give a better quality resized image for different devices.
 
 Other methods:
 
@@ -192,13 +181,6 @@ The PHP file then does some intelligent thinking which can cover a number of sce
 
 An example of this, including the php code, can be found at GitHub:
 https://github.com/MattWilcox/Adaptive-Images
-
-
-*Combine Images to CSS Sprites:
-
-CSS sprites allow you to combine multiple images into a single file. 
-Ordinary sprites are a fixed size, but 'responsive sprites' are able to be resized, for example using: max-width: 100%;
-
 
 
 
