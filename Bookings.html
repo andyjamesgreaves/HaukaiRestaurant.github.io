@@ -48,7 +48,7 @@ The Haukai Restaurant Make Reservation page
 		<div id="panel-heading"><h1>Reservation</h1></div>
 			<div id="panel1">
 				
-				<form name="reservationform" method="post" action="#"onsubmit="return checkformReservation()" onreset="return resetForm()">
+				<form id="reservationForm" method="post" action="#"onsubmit="return checkformReservation()" onreset="return resetForm()">
 					<fieldset>
 						<br>
 						<label for="firstName">First name:</label>
@@ -58,7 +58,7 @@ The Haukai Restaurant Make Reservation page
 						<label for="phoneNumber">Phone:<label>
 							<input type="text" id="phoneNumber" name="phoneNumber"><br><br>
 						<label for="Email">Email:</label>
-							<input type="text" id="Email" name="Email" style="width: 90%"><br><br>
+							<input type="text" id="Email" name="Email" style="width: 80%"><br><br>
 						<label for="Date">Date:</label>
 							<select id="Date" name="Date">
 								<option value="jan">Jan</option>
@@ -98,7 +98,7 @@ The Haukai Restaurant Make Reservation page
 								<option value="8">8</option>
 								<option value="9">9</option>
 								<option value="10">10</option>							
-							</select><br><br>
+							</select><br><br><br>
 						<input id="submit" type="submit" style="font-weight: bold;" style="font-size: 1.5vw;">&nbsp;
 						<input id="cancel" type="reset" value = "Cancel" style="font-weight: bold;"><br><br>
 					</fieldset>
