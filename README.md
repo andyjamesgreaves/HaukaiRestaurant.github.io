@@ -161,8 +161,6 @@ Another method that could used, but not incorporated here, could include Adaptiv
 
 
 
-
-
 #Optimise page loading times
 
 Techniques used for optimising page loading:

@@ -9,14 +9,15 @@ The Haukai Restaurant Home page
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<link rel="stylesheet" href="css/css.css"/>
+		<script type="text/javascript" src="js/CheckUsernamePassword.js"></script>
     </head>	
     <body><div id="bg-image"><img src="images/mussels and scallops.jpg" width="100%" alt="" ></div>
 			
 			<header>
 				<div id="logo">
-					<img id="logo-img" src="images/mussels and scallops.jpg" height="160px" width="15%" alt="mussels and scallops">  	
-					<img id="logo-img" src = "images/Logo1.jpg" height="160px" width="18%" alt="logo">
-					<img id="logo-img" src="images/dining out1.jpg" height="160px" width="15%" alt="dining out"><br><br>
+					<img id="logo-img" src="images/mussels and scallops.jpg" width="15%" alt="mussels and scallops">  	
+					<img id="logo-img" src = "images/Logo1.jpg" width="18%" alt="logo">
+					<img id="logo-img" src="images/dining out1.jpg" width="15%" alt="dining out"><br><br>
 					<p1>1 Island Street</p1><br>
 					<p1>Kerikeri, Bay of Islands</p1><br>
 					<p1>09 401 4019</p1><br>
@@ -44,7 +45,7 @@ The Haukai Restaurant Home page
 		<div class="main-container">			
 			<div id="panel-heading"><h1>Welcome to The Haukai Restaurant</h1></div>
 			<div id="panel1">
-				<!--<article>-->
+				<article>
 					<p>The Haukai restaurant offers a local Maori cultural experience with its history and cuisine. It offers both Maori and Pakeha kai where diners can experience te ao Maori with the use of karakia for blessing of the food.</p>
 					<p>We offer a warm friendly and intimate ambience with caring service to enhance your experience.</p>
 					<p>The Haukai restaurant is in the quaint township of Kerikeri which is nestled just inland from the beautiful Bay of Islands.</p>
@@ -57,13 +58,14 @@ The Haukai Restaurant Home page
 						<a href="http://twitter.com"><img src="Images/Twitter.png" height="80" width="10%"></a><br>
 						<br>						
 					</p>
-				<!--</article>-->
+				</article>
 			</div><!--panel1-->
 			<div id="panel2">
 				<h2>We are here</h2>				
 				<div class="mapouter"><div class="gmap_canvas"><iframe width=100% height=80% id="gmap_canvas" src="https://maps.google.com/maps?q=102%20kerikeri%20rd%2C%20kerikeri%2C%20bay%20of%20islands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>				
 			</div><!--panel2-->
 		</div><!--main-container--></div>
+		<a style="font-size: 1.5rem" onclick="return checkUsernamePassword()">Staff Roster</a>
 		<div class="footer">&copy Copyright 2019 The Haukai Restaurant. Design by Andy Greaves</div>
     </body>
 </html>
