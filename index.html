@@ -10,6 +10,15 @@ The Haukai Restaurant Home page
 		
 		<link rel="stylesheet" href="css/css.css"/>
 		<script type="text/javascript" src="js/CheckUsernamePassword.js"></script>
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'GA_TRACKING_ID');
+		</script>
     </head>	
     <body>
 		<div id="bg-image"><img src="images/mussels and scallops.jpg" width="100%" alt="" ></div>			
@@ -66,15 +75,7 @@ The Haukai Restaurant Home page
 				<div class="mapouter"><div class="gmap_canvas"><iframe width=100% height=80% id="gmap_canvas" src="https://maps.google.com/maps?q=102%20kerikeri%20rd%2C%20kerikeri%2C%20bay%20of%20islands&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>				
 			</div><!--panel2-->
 		</div><!--main-container--></div>
-		<a style="font-size: 1.5rem" onclick="return checkUsernamePassword()">Staff Roster</a>
-		<!-- Global Site Tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'GA_TRACKING_ID');
-</script>
+		<a style="font-size: 1.5rem" onclick="return checkUsernamePassword()">Staff Roster</a>		
 		<div class="footer">&copy Copyright 2019 The Haukai Restaurant. Design by Andy Greaves</div>
     </body>
 </html>
