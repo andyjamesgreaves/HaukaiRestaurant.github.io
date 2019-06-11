@@ -19,6 +19,8 @@ A master repository was set up in Github.com to store the website files - to sha
 Username: andyjamesgreaves
 URL: https://github.com/andyjamesgreaves/The_Haukai_Restaurant.git
 
+To view website on Github Pages: https://andyjamesgreaves.github.io
+
 
 
 #Privacy Statement
