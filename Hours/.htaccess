@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "Password protected access"
+AuthUserFile Hours/.htpasswd
+<Files "Roster.html">
+    Require valid-user
+</Files>
