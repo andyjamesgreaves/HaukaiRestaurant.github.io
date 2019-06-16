@@ -8,7 +8,7 @@ function checkUsernamePassword() {
 	password=prompt('Password');
 	if (username==user && password==pass) {
 		alert('Authentication successful, click OK to proceed to Roster');
-		window.location="Roster.html";
+		window.location="Hours/Roster.html";
 	}
 	else {
 		alert('The username or password is incorrect, please try again');
