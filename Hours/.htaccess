@@ -1,4 +1,6 @@
 AuthType Basic
 AuthName "Password protected access"
 AuthUserFile "https://andyjamesgreaves.github.io/Hours/.htpasswd"
+<Limit GET POST>
 require valid-user
+</Limit>
