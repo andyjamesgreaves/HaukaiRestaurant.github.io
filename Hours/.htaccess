@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Password protected access"
-AuthUserFile /Hours/.htpasswd
+AuthUserFile andyjamesgreaves.github.io/Hours/.htpasswd
 require valid-user
