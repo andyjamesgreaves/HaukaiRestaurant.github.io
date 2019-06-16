@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Password protected access"
-AuthUserFile /Hours/Roster.html/.htpasswd
-Require valid-user
+AuthUserFile /Hours/.htpasswd
+require valid-user
